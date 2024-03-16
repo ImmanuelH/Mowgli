@@ -15,9 +15,12 @@ static const char MOWERCONTROLSRV[] = "mower_msgs/MowerControlSrv";
     public:
       typedef uint8_t _mow_enabled_type;
       _mow_enabled_type mow_enabled;
+      typedef uint8_t _mow_direction_type;
+      _mow_direction_type mow_direction;
 
     MowerControlSrvRequest():
-      mow_enabled(0)
+      mow_enabled(0),
+      mow_direction(0)
     {
     }
 
@@ -26,6 +29,8 @@ static const char MOWERCONTROLSRV[] = "mower_msgs/MowerControlSrv";
       int offset = 0;
       *(outbuffer + offset + 0) = (this->mow_enabled >> (8 * 0)) & 0xFF;
       offset += sizeof(this->mow_enabled);
+      *(outbuffer + offset + 0) = (this->mow_direction >> (8 * 0)) & 0xFF;
+      offset += sizeof(this->mow_direction);
       return offset;
     }
 
@@ -34,6 +39,8 @@ static const char MOWERCONTROLSRV[] = "mower_msgs/MowerControlSrv";
       int offset = 0;
       this->mow_enabled =  ((uint8_t) (*(inbuffer + offset)));
       offset += sizeof(this->mow_enabled);
+      this->mow_direction =  ((uint8_t) (*(inbuffer + offset)));
+      offset += sizeof(this->mow_direction);
      return offset;
     }
 

@@ -53,7 +53,7 @@ void BLADEMOTOR_Init(void);
 void BLADEMOTOR_App(void);
 void BLADEMOTOR_ReceiveIT(void);
 
-void BLADEMOTOR_Set(uint8_t on_off);
+void BLADEMOTOR_Set(uint8_t on_off, uint8_t direction);
 
 
 #ifdef __cplusplus
