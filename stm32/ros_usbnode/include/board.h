@@ -24,9 +24,10 @@ extern "C"
 #define DEBUG_TYPE_NONE 0
 #define DEBUG_TYPE_UART 1
 #define DEBUG_TYPE_SWO 2
+#define DEBUG_TYPE_RTT 3
 
 /* Publish Mowgli Topics */
-//#define ROS_PUBLISH_MOWGLI
+#define ROS_PUBLISH_MOWGLI
 
 /* different type of panel are possible */
 #define PANEL_TYPE_NONE 0
@@ -65,7 +66,7 @@ extern "C"
 #define VALID_BOARD_DEFINED 1
 #define PANEL_TYPE PANEL_TYPE_YARDFORCE_500_CLASSIC
 #define BLADEMOTOR_LENGTH_RECEIVED_MSG 16
-#define DEBUG_TYPE DEBUG_TYPE_SWO
+#define DEBUG_TYPE DEBUG_TYPE_RTT
 
 #define MAX_MPS 0.5		  // Allow maximum speed of 1.0 m/s
 #define PWM_PER_MPS 300.0 // PWM value of 300 means 1 m/s bot speed so we divide by 4 to have correct robot speed but still progressive speed
