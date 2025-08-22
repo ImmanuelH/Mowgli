@@ -74,7 +74,7 @@ extern DMA_HandleTypeDef hdma_uart_blade_tx;
 extern DMA_HandleTypeDef hdma_uart_blade_rx;
 extern DMA_HandleTypeDef hdma_uart4_tx;
 extern DMA_HandleTypeDef hdma_uart4_rx;
-DMA_HandleTypeDef hdma_adc;
+extern DMA_HandleTypeDef hdma_adc;
 
 extern ADC_HandleTypeDef ADC_Charging_Handle;
 
